@@ -18,17 +18,17 @@ if __name__ == '__main__':
     parser.add_argument('--name', type=str, required=True)
     args = parser.parse_args()
 
-    if args.name == 'curule':
-        img1 = cv2.imread('res/curule/im0.png')
-        img2 = cv2.imread('res/curule/im1.png')
-        K1 = np.array([[1758.23*resize_factor, 0, 977.42*resize_factor],
-                       [0, 1758.23*resize_factor, 552.15*resize_factor],
+    if args.name == 'pendulum':
+        img1 = cv2.imread('res/pendulum/im0.png')
+        img2 = cv2.imread('res/pendulum/im1.png')
+        K1 = np.array([[1729.05*resize_factor, 0, -364.24*resize_factor],
+                       [0, 1729.05*resize_factor, 552.22*resize_factor],
                        [0, 0, 1]])
-        K2 = np.array([[1758.23*resize_factor, 0, 977.42*resize_factor],
-                       [0, 1758.23*resize_factor, 552.15*resize_factor],
+        K2 = np.array([[1729.05*resize_factor, 0, -364.24*resize_factor],
+                       [0, 1729.05*resize_factor, 552.22*resize_factor],
                        [0, 0, 1]])
-        baseline = 88.39
-        f = 1758.23
+        baseline = 537.75
+        f = 1729.05
     elif args.name == 'octagon':
         img1 = cv2.imread('res/octagon/im0.png')
         img2 = cv2.imread('res/octagon/im1.png')
@@ -41,16 +41,16 @@ if __name__ == '__main__':
         baseline = 221.76
         f = 1742.11
     else:
-        img1 = cv2.imread('res/pendulum/im0.png')
-        img2 = cv2.imread('res/pendulum/im1.png')
-        K1 = np.array([[1729.05*resize_factor, 0, -364.24*resize_factor],
-                       [0, 1729.05*resize_factor, 552.22*resize_factor],
+        img1 = cv2.imread('res/curule/im0.png')
+        img2 = cv2.imread('res/curule/im1.png')
+        K1 = np.array([[1758.23*resize_factor, 0, 977.42*resize_factor],
+                       [0, 1758.23*resize_factor, 552.15*resize_factor],
                        [0, 0, 1]])
-        K2 = np.array([[1729.05*resize_factor, 0, -364.24*resize_factor],
-                       [0, 1729.05*resize_factor, 552.22*resize_factor],
+        K2 = np.array([[1758.23*resize_factor, 0, 977.42*resize_factor],
+                       [0, 1758.23*resize_factor, 552.15*resize_factor],
                        [0, 0, 1]])
-        baseline = 537.75
-        f = 1729.05
+        baseline = 88.39
+        f = 1758.23
 
     width = int(img1.shape[1] * resize_factor)
     height = int(img1.shape[0] * resize_factor)
