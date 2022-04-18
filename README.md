@@ -26,4 +26,4 @@ if you want to run the depth estimation on pendulum dataset
 python main.py --name pendulum
 ```
 
-**res** contains the resources files <br>
+**res** contains the resources files
