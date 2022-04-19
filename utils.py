@@ -9,7 +9,7 @@ import random
 import numpy as np
 
 
-def featureMapping(gray1, gray2, no_of_keyPoints=30):
+def featureMapping(gray1, gray2, no_of_keyPoints=40):
     """
     Definition
     ---
@@ -18,7 +18,7 @@ def featureMapping(gray1, gray2, no_of_keyPoints=30):
     Parameters
     ---
     gray1, gray2: grayscale images
-    no_of_keyPoints: number of matching features (default = 30)
+    no_of_keyPoints: number of matching features (default = 40)
 
     Returns
     ---
