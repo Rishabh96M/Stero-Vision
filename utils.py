@@ -37,7 +37,7 @@ def featureMapping(gray1, gray2, no_of_keyPoints=40):
     # Sort them in the order of their distance.
     matches = sorted(matches, key=lambda x: x.distance)
 
-    # Select first 30 matches.
+    # Select first n matches.
     final_matches = matches[:no_of_keyPoints]
 
     img_keypoints = cv2.drawMatches(
